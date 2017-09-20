@@ -2,7 +2,7 @@ import React from 'react'
 
 export default ({ data }) => {
     const pageData = data.citiesJson.value
-    console.dir(data)
+    const spotifyUrl = `http://open.spotify.com/user/bandsfromhere/playlist/${pageData.spotifyPlaylistUri}`
     return (
         <div>
         <div className="f4 fw4 pa2">
@@ -12,13 +12,14 @@ export default ({ data }) => {
             </div>
             <div className="dtc v-top fl pl4">
                 <h2 className="lh-copy mv0 f3 f3-ns mv2-ns">
-                    Bands from San Francisco, CA
+                    Bands from {pageData.city}, {pageData.state} 
                 </h2>
                 <p className="f5 fw4 gray mt0">Last updated Sep 15th, 2018</p>
                 <a className="f6 grow no-underline br-pill ph3 pv2 mb3 dib white bg-black"
                     style={{ "background-color": "#1DB954" }}
                     target="_"
-                    href={"asd"}>
+                    href={spotifyUrl}
+                    >
                     Open in Spotify</a>
                 <h3>156 Artists</h3>
                 <main className="mw6 center">
@@ -146,6 +147,7 @@ export const query = graphql`
             value {
                 city
                 state
+                spotifyPlaylistUri
             }
         }
     }

@@ -1,0 +1,19 @@
+[
+    {
+        "value" :{
+            "city": "Austin",
+            "state": "TX",
+            "slug": "/austin-tx"
+        },
+        "type": "Cities"
+    },
+    {
+        "value" :{
+            "city": "San Francisco",
+            "state": "CA",
+            "slug": "/san-francisco-ca"
+       },
+        "type": "Cities"
+    }
+]       
+    

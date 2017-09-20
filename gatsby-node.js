@@ -13,6 +13,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           city
           state
           slug
+          spotifyPlaylistUri
         }
       }
     }
@@ -30,12 +31,5 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             })
             resolve()
         })
-    })
-    createPage({
-        path: '/san-francisco-ca',
-        component: path.resolve('./src/templates/city.js'),
-        context: {
-            data,
-        }
     })
 }
